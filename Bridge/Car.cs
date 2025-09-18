@@ -6,18 +6,15 @@ using static System.Net.Mime.MediaTypeNames;
 namespace Bridge
 {
     /// <summary>
-    /// Car class with properties Licensplate and date and methods to get price and vehicle type.
+    /// Car class with properties Licensplate and date from the base class vehicle and methods to get price and vehicle type.
     /// </summary>
-    public class Car
+    public class Car : vehicle
     {
-        public string Licenseplate { get; set; }
-        public DateTime Date { get; set; }
-
         /// <summary>
         /// Gets the fixed price value.
         /// </summary>
         /// <returns>The price (230) as a double</returns>
-        public double Price()
+        public override double Price()
         {
             return 230;
         }
@@ -26,7 +23,7 @@ namespace Bridge
         /// Gets the type of the vehicle.
         /// </summary>
         /// <returns>A string representing the type of the vehicle. The default value is "Car".</returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "Car";
         }

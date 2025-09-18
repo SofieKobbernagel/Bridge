@@ -21,7 +21,7 @@ namespace BridgeTest
         public void TestVehicleType()
         {
             MC mc = new MC();
-            var result = mc.Vehicle();
+            var result = mc.VehicleType();
             Assert.AreEqual("MC", result);
         }
     }

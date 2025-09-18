@@ -7,18 +7,15 @@ using System.Threading.Tasks;
 namespace Bridge
 {
     /// <summary>
-    /// Motorcyckle class with properties Licensplate and date and methods to get price and vehicle type.
+    /// Motorcyckle class with properties Licensplate and date from the base class vehicle and methods to get price and vehicle type.
     /// </summary>
-    public class MC
+    public class MC : vehicle
     {
-        public string Licenseplate;
-        public DateTime Date;
-
         /// <summary>
         /// Gets the fixed price value.
         /// </summary>
         /// <returns>The price (120) as a double</returns>
-        public double Price()
+        public override double Price()
         {
             return 120;
         }
@@ -26,7 +23,7 @@ namespace Bridge
         /// Gets the type of the vehicle.
         /// </summary>
         /// <returns>A string representing the type of the vehicle. The default value is "MC".</returns>
-        public string Vehicle()
+        public override string VehicleType()
         {
             return "MC";
         }
