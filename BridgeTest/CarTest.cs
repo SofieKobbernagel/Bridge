@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace BridgeTest
 {
     [TestClass]
-    public sealed class Test1
+    public sealed class CarTest
     {
         [TestMethod]
         public void TestPrice()
