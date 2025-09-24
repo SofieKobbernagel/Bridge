@@ -11,6 +11,12 @@ namespace Bridge
     /// </summary>
     public class MC : vehicle
     {
+        public MC(string licenseplate, DateTime date) : base(licenseplate, date)
+        {
+            Licenseplate = licenseplate;
+            Date = date;
+        }
+
         /// <summary>
         /// Gets the fixed price value.
         /// </summary>
@@ -22,7 +28,7 @@ namespace Bridge
         /// <summary>
         /// Gets the type of the vehicle.
         /// </summary>
-        /// <returns>A string representing the type of the vehicle. The default value is "MC".</returns>
+        /// <returns>A string representing the type of the vehicle in this case "MC".</returns>
         public override string VehicleType()
         {
             return "MC";
