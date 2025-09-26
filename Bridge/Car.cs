@@ -10,10 +10,19 @@ namespace Bridge
     /// </summary>
     public class Car : vehicle
     {
-        public Car(string licenseplate, DateTime date) : base(licenseplate, date)
+        /// <summary>
+        /// standard constructor for Car class inheriting from vehicle class.
+        /// </summary>
+        /// <param name="licenseplate"></param>
+        /// <param name="date"></param>
+        /// <param name="bro"></param>
+        /// Base price is set to 230.
+        public Car(string licenseplate, DateTime date, bool bro) : base(licenseplate, date, bro)
         {
             Licenseplate = licenseplate;
             Date = date;
+            HasBroBizz = bro;
+            BasePrice = 230;
         }
         /// <summary>
         /// Gets the fixed price value.
@@ -21,7 +30,7 @@ namespace Bridge
         /// <returns>The price (230) as a double</returns>
         public override double Price()
         {
-            return 230;
+            return base.Price();
         }
 
         /// <summary>

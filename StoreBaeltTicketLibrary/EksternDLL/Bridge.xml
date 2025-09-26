@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bridge</name>
+    </assembly>
+    <members>
+        <member name="T:Bridge.Car">
+            <summary>
+            Car class with properties Licensplate and date from the base class vehicle and methods to get price and vehicle type.
+            </summary>
+        </member>
+        <member name="M:Bridge.Car.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            standard constructor for Car class inheriting from vehicle class.
+            </summary>
+            <param name="licenseplate"></param>
+            <param name="date"></param>
+            <param name="bro"></param>
+            Base price is set to 230.
+        </member>
+        <member name="M:Bridge.Car.Price">
+            <summary>
+            Gets the fixed price value.
+            </summary>
+            <returns>The price (230) as a double</returns>
+        </member>
+        <member name="M:Bridge.Car.VehicleType">
+            <summary>
+            Gets the type of the vehicle.
+            </summary>
+            <returns>A string representing the type of the vehicle in this case "Car".</returns>
+        </member>
+        <member name="T:Bridge.MC">
+            <summary>
+            Motorcyckle class with properties Licensplate and date from the base class vehicle and methods to get price and vehicle type.
+            </summary>
+        </member>
+        <member name="M:Bridge.MC.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Standard constructor for MC class inheriting from vehicle class.
+            </summary>
+            <param name="licenseplate"></param>
+            <param name="date"></param>
+            <param name="bro"></param>
+            Base price is set to 120.
+        </member>
+        <member name="M:Bridge.MC.Price">
+            <summary>
+            Gets the fixed price value.
+            </summary>
+            <returns>The price (120) as a double</returns>
+        </member>
+        <member name="M:Bridge.MC.VehicleType">
+            <summary>
+            Gets the type of the vehicle.
+            </summary>
+            <returns>A string representing the type of the vehicle in this case "MC".</returns>
+        </member>
+        <member name="M:Bridge.vehicle.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            standard constructor for vehicles
+            </summary>
+            <param name="licenseplate">Licenseplate of the car</param>
+            <param name="date">The date the ticket is issued</param>
+            <param name="bro">Says weather or not you have brobizz</param>
+            <exception cref="T:System.ArgumentException">Thows an exception if Licenseplate is not 7 characters</exception>
+        </member>
+        <member name="M:Bridge.vehicle.Price">
+            <summary>
+            Gets the fixed price value
+            </summary>
+            <returns>The price as a double</returns>
+        </member>
+        <member name="M:Bridge.vehicle.VehicleType">
+            <summary>
+            Gets the type of the vehicle.
+            </summary>
+            <returns>A string representing the type of the vehicle.</returns>
+        </member>
+    </members>
+</doc>

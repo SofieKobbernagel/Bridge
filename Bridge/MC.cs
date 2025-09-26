@@ -11,10 +11,19 @@ namespace Bridge
     /// </summary>
     public class MC : vehicle
     {
-        public MC(string licenseplate, DateTime date) : base(licenseplate, date)
+        /// <summary>
+        /// Standard constructor for MC class inheriting from vehicle class.
+        /// </summary>
+        /// <param name="licenseplate"></param>
+        /// <param name="date"></param>
+        /// <param name="bro"></param>
+        /// Base price is set to 120.
+        public MC(string licenseplate, DateTime date, bool bro) : base(licenseplate, date, bro)
         {
             Licenseplate = licenseplate;
             Date = date;
+            HasBroBizz = bro;
+            BasePrice = 120;
         }
 
         /// <summary>
@@ -23,8 +32,10 @@ namespace Bridge
         /// <returns>The price (120) as a double</returns>
         public override double Price()
         {
-            return 120;
+            return base.Price();
         }
+      
+        
         /// <summary>
         /// Gets the type of the vehicle.
         /// </summary>
